@@ -1,0 +1,14 @@
+{
+  "name": "quick-icon",
+  "bin": {
+    "qicon": "./main.js",
+    "quick-icon": "./main.js"
+  },
+  "author": {
+    "name": "lecepin",
+    "email": "leping086@vip.qq.com"
+  },
+  "dependencies": {
+    "svgo": "^3.0.5"
+  }
+}
