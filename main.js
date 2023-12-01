@@ -22,7 +22,7 @@ let previewStr = "";
 let previewStrIndex = 0;
 
 try {
-  config = require(`./${configFileName}`);
+  config = require(`${path.resolve(process.cwd(), configFileName)}`);
   config.output = config.output || "./icons";
 } catch (error) {
   console.error("🚫 无法读取配置文件：", error);
