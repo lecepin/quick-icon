@@ -1,7 +1,7 @@
 ## 一键 SVG 文件转 React 组件
 
 ```
-npm i -g qicon
+npm i -g quick-icon
 ```
 
 配置文件默认读取 `.qicon.js`，可通过 `qicon -c xxx.js` 指定。
