@@ -21,6 +21,14 @@ type TProps = {
 let previewStr = "";
 let previewStrIndex = 0;
 
+function toCamelCase(str) {
+  const parts = str.split("-");
+
+  return parts
+    .map((part, index) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join("");
+}
+
 try {
   config = require(`${path.resolve(process.cwd(), configFileName)}`);
   config.output = config.output || "./icons";
@@ -93,8 +101,7 @@ config.colorIcon.forEach((item) => {
     });
 
     tsStr += `export const ${
-      config.compoentPrefix +
-      item.name.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+      config.compoentPrefix + toCamelCase(item.name)
     }: FC<TProps> = ({ className, style = {} }) => (
   <div
     style={{
@@ -161,8 +168,7 @@ config.solidColorIcon.forEach((item) => {
     });
 
     tsStr += `export const ${
-      config.compoentPrefix +
-      item.name.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase())
+      config.compoentPrefix + toCamelCase(item.name)
     }: FC<TProps> = ({ className, style = {} }) => (
   <div
     style={{

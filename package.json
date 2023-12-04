@@ -1,6 +1,6 @@
 {
   "name": "quick-icon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bin": {
     "qicon": "./main.js",
     "quick-icon": "./main.js"
